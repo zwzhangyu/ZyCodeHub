@@ -13,5 +13,4 @@ public class MethodTimeController {
         Thread.sleep(2000);
         return "OK";
     }
-
 }
