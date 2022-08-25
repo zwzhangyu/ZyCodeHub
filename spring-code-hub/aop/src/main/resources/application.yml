@@ -1,0 +1,31 @@
+server:
+  port: 36025
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+# 测试数据安全
+myActuator:
+  password : 123456
+  secret : 123456
+  key : 123456
+spring:
+  devtools:
+    remote:
+      secret: myappsecret
+      debug:
+        local-port : 5005
+    livereload:
+      enabled: true
+      port: 35722
+
+logging:
+  level:
+    web: DEBUG
+
+
+
