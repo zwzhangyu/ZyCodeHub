@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        #app {
+            margin: 0 auto;
+            width: 800px;
+        }
+
+        el-form-item {
+            width: 200px;
+        }
+
+        .head-label {
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            color: #909399;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .el-icon-delete {
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="app">
+    <div>
+        <label class="head-label">属性名称</label><label class="head-label">数据类型</label>
+    </div>
+    <div>
+        <el-form :inline="true" id="tdg-form">
+            <div v-for="(item,index) in regexNameList"
+                 :key="item.id"
+                 class="regex_input">
+                <todo-item @aaa="deleteRegex(index)"  ref="table"></todo-item>
+            </div>
+        </el-form>
+    </div>
+    <div>
+        <el-button type="info" icon="el-icon-circle-plus-outline" @click="addNewR2ow">添加行</el-button>
+        <el-button type="info" icon="el-icon-circle-plus-outline" @click="show">添加行</el-button>
+    </div>
+</div>
+
+<script src="/js/vue.2.6.11.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+    Vue.component('todo-item', {
+            data() {
+                return {
+                    name: "",
+                    formInline: ""
+                }
+            },
+
+            template: `
+              <div class="tdg-form-row">
+              <el-form-item>
+                <el-input v-model="name"></el-input>
+              </el-form-item>
+              <el-form-item>
+                <el-select v-model="formInline" placeholder="请选择">
+                  <el-option label="区域一" value="shanghai"></el-option>
+                  <el-option label="区域二" value="beijing"></el-option>
+                </el-select>
+              </el-form-item>
+              <el-form-item>
+                <i class="el-icon-delete" @click="remove22"></i>
+              </el-form-item>
+              </div> `,
+            methods: {
+                remove22: function (index) {
+                    this.$emit("aaa", index)
+                }
+            }
+        },
+    )
+    var vueApp = new Vue({
+        el: '#app',
+        //页面展示基本属性
+        data: {
+            i: 0,
+            formInline: {
+                user: '',
+                region: ''
+            },
+            regexNameList: [
+                {
+                    name: ""
+                }
+            ],
+        },
+        watch: {},
+        methods: {
+            addNewR2ow: function () {
+                this.regexNameList.push({id: this.i++});
+            },
+            deleteRegex(index) {
+                if (this.regexNameList.length > 0) {
+                    this.regexNameList.splice(index, 1);
+                }
+            },
+            show() {
+                const table = this.$refs['table'];
+                for (const tableElement of table) {
+                    console.log('子组件数据',tableElement.name)
+                }
+
+
+
+            }
+        },
+        //初始化触发
+        mounted: function () {
+
+        },
+        updated: function () {
+
+        }
+
+
+    })
+
+
+</script>
+</body>
+</html>

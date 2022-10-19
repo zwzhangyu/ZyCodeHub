@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+<script type="text/javascript">
+    function f() {
+        if (true) {
+            var iframeElement1 = document.getElementById("iframe1");
+            iframeElement1.src = iframeElement1.src;
+            var iframeElement2 = document.getElementById("iframe2");
+            iframeElement2.src = iframeElement2.src;
+            setTimeout(f, 5 * 1000);
+        }
+    }
+
+    //定时器，实现每30秒调用一次函数f
+    setTimeout(f, 5 * 1000);
+</script>
+
+
+<iframe id="iframe1" src="/iframe/example1/showStr"></iframe>
+<!--通过src指向一个 Servlet类，实现对服务器端的请求-->
+<div id="message1" style="height:100px; width:100%; "></div>
+
+<iframe id="iframe2" src="/iframe/example1/showNum"></iframe>
+<!--通过src指向一个 Servlet类，实现对服务器端的请求-->
+<div id="message2" style="height:100px; width:100%; "></div>
+
+</body>
+</html>

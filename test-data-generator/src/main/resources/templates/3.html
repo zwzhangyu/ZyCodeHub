@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <style>
+    #app {
+      margin: 0 auto;
+      width: 800px;
+    }
+
+    el-form-item {
+      width: 200px;
+    }
+
+    .head-label {
+      display: inline-block;
+      width: 200px;
+      text-align: center;
+      color: #909399;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .el-icon-delete {
+      font-size: 20px;
+    }
+  </style>
+
+</head>
+<body>
+<div id="app">
+  <div>
+    <label class="head-label">属性名称</label><label class="head-label">数据类型</label>
+  </div>
+  <div>
+    <el-form :inline="true" id="tdg-form">
+      <div v-for="(item,index) in regexNameList"
+           :key="index"
+           class="regex_input">
+        <todo-item></todo-item>
+      </div>
+    </el-form>
+  </div>
+  <div>
+    <el-button type="info" icon="el-icon-circle-plus-outline" @click="addNewRow">添加行</el-button>
+  </div>
+</div>
+
+<script src="/js/vue.2.6.11.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+  Vue.component('todo-item', {
+            template: `
+              <div class="tdg-form-row">
+              <el-form-item>
+                <el-input v-model="modelForm.billNo"></el-input>
+              </el-form-item>
+              <el-form-item>
+                <el-select  v-model="modelForm.billNo" placeholder="请选择">
+                  <el-option label="区域一"  value="shanghai"></el-option>
+                  <el-option label="区域二" value="beijing"></el-option>
+                </el-select>
+              </el-form-item>
+              <el-form-item>
+                <i class="el-icon-delete" @click="remove"></i>
+              </el-form-item>
+              </div> `,
+            methods: {
+              remove: function () {
+                $(this).remove()
+              }
+            }
+          },
+  )
+
+  var vueApp = new Vue({
+    el: '#app',
+    //页面展示基本属性
+    data: {
+      name: "dd",
+      formInline: {
+        user: '',
+        region: ''
+      },
+      regexNameList: [
+        {
+          name: ""
+        }
+      ],
+    },
+    watch: {},
+    methods: {
+      addNewRow: function () {
+        this.regexNameList.push({name: ""});
+      }
+    },
+    //初始化触发
+    mounted: function () {
+
+    },
+    updated: function () {
+
+    }
+
+
+  })
+
+
+</script>
+</body>
+</html>
