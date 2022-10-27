@@ -7,6 +7,7 @@ ZhangYuCodeHub
 - com.zy.redis.transaction redis事务操作
 - com.zy.redis.pipeline Redis流水线
 - com.zy.redis.listener 使用 Redis 发布订阅
+- com.zy.redis.lua Redis整合lua脚本实践
 
 ### （2）aop Spring整合aop实践整理
 
