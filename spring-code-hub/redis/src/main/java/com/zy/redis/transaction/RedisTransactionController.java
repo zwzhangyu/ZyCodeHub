@@ -50,7 +50,6 @@ public class RedisTransactionController {
         return ResponseEntity.ok(list);
     }
 
-
     /**
      * redis事务测试异常
      */
