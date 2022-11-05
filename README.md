@@ -8,6 +8,7 @@ ZhangYuCodeHub
 - com.zy.redis.pipeline Redis流水线
 - com.zy.redis.listener 使用 Redis 发布订阅
 - com.zy.redis.lua Redis整合lua脚本实践
+- com.zy.redis.cache spring集成和实践缓存注解
 
 ### （2）aop Spring整合aop实践整理
 

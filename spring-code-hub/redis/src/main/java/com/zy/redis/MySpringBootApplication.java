@@ -1,26 +1,22 @@
 package com.zy.redis;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.dao.DataAccessException;
-import org.springframework.data.redis.core.*;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @SpringBootApplication
 @RestController
+@MapperScan(basePackages = "com.zy.redis.cache", annotationClass = Repository.class)
+@EnableCaching
 public class MySpringBootApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MySpringBootApplication.class, args);
     }
-
 
 
 }
