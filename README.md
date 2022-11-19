@@ -28,6 +28,8 @@ java-agent相关代码
 - 《Web异步与实时交互：iframe AJAX WebSocket开发实战》书籍实践代码
 - Web异步与实时交互异步处理代码
 
+# 六、rpa RPA实践
+Selenium实践应用
 
 
 
