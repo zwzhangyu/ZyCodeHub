@@ -32,7 +32,7 @@ public class HeadlessAppExample {
             // 查找某一元素是否存在
             WebElement webElement = driver.findElement(By.id("su"));
             log.info("元素text信息:{}", webElement.getAttribute("value"));
-            Thread.sleep(1000000);
+            Thread.sleep(3000);
         } catch (Exception e) {
             log.error(e.getMessage());
         } finally {
