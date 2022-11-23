@@ -4,10 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 public class User {
     private Long id;
 
@@ -15,6 +15,11 @@ public class User {
 
     private String phone;
 
+    private Date birthday;
+
+
+    public User() {
+    }
 
     public static List<User> list() {
         List<User> userList = new ArrayList<>();
@@ -24,5 +29,9 @@ public class User {
         return userList;
     }
 
-
+    public User(Long id, String name, String phone) {
+        this.id = id;
+        this.name = name;
+        this.phone = phone;
+    }
 }
