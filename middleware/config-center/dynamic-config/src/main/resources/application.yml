@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: config
+
+server:
+  port: 6879
+
+person:
+  name: zhangyu
+  age: 18
