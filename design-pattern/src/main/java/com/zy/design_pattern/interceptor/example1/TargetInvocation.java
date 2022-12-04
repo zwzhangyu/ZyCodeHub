@@ -1,4 +1,4 @@
-package com.zy.design_pattern.interceptor_pattern.example1;
+package com.zy.design_pattern.interceptor.example1;
 
 
 import java.util.ArrayList;

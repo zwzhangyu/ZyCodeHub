@@ -1,4 +1,4 @@
-package com.zy.design_pattern.interceptor_pattern.example1;
+package com.zy.design_pattern.interceptor.example1;
 
 public class InterceptorDemo {
 
@@ -8,10 +8,8 @@ public class InterceptorDemo {
         targetInvocation.addInterceptor(new AuditInterceptor());
         targetInvocation.setRequest(new Request());
         targetInvocation.setTarget(request -> {
-            System.out.println("dddddddddd");
             return new Response();
         });
         targetInvocation.invoke();
     }
-
 }

@@ -1,4 +1,4 @@
-package com.zy.design_pattern.interceptor_pattern.example1;
+package com.zy.design_pattern.interceptor.example1;
 
 
 public class LogInterceptor implements Interceptor {

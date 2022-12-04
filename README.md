@@ -23,7 +23,8 @@ java-agent相关代码
 
 # 五、design-pattern 设计模式
 
-- interceptor_pattern 拦截器模式
+- interceptor 拦截器模式
+- pipeline 管道模式
 
 
 # 六、tool 开发工具整理
