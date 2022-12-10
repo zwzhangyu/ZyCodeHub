@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    </script>
+</head>
+<body>
+
+
+<button onclick="mockFlashSale()">开始抢购</button>
+
+<script type="text/javascript">
+
+    function insertPurchaseRecord() {
+        var params = {
+            userId: 1,
+            productId: 1,
+            quantity: 3
+        };
+        // 通过POST请求后端
+        $.post("/purchase", params, function (result) {
+            alert(result.message);
+        });
+    }
+
+    /**
+     * 模拟抢购
+     */
+    function mockFlashSale() {
+        for (var i = 1; i <= 50000; i++) {
+            var params = {
+                userId: 1,
+                productId: 1,
+                quantity: 1
+            };
+            // 通过POST请求后端，这里的JavaScript会采用异步请求
+            $.post("/purchase", params, function (result) {
+            });
+        }
+    }
+</script>
+</body>
+</html>
