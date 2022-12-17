@@ -24,7 +24,7 @@
 
 
 
-## （四）flash-sale 基于SpringBoot的商品并发抢购项目实例
+## （五）flash-sale 基于SpringBoot的商品并发抢购项目实例
 
 使用悲观锁、乐观锁以及redis lua脚本三种方式实践商品抢购案例
 
