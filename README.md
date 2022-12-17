@@ -20,6 +20,10 @@
 - com.zy.spring.mvc.view 视图和视图解析器pdf/excel/html等视图
 - com.zy.spring.mvc.annotation SpringMVC相关注解使用
 
+## （四）retry 重试框架 Spring-Retry 和 Guava-Retry实践
+
+
+
 ## （四）flash-sale 基于SpringBoot的商品并发抢购项目实例
 
 使用悲观锁、乐观锁以及redis lua脚本三种方式实践商品抢购案例
