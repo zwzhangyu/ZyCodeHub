@@ -38,7 +38,7 @@ java-agent相关代码
 
 # 五、database 数据库操作
 
-# 六、design-pattern 设计模式
+# 六、 [design-pattern](design-pattern) 设计模式
 
 ## interceptor 拦截器模式
 ## pipeline 管道模式
@@ -46,9 +46,6 @@ java-agent相关代码
 ## template 模板模式
 ## decorator 装饰器模式
 ## callback  事件回调
-
-
-
 
 # 七、tools 开发工具整理
 
