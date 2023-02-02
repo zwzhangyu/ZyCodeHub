@@ -3,6 +3,7 @@
 ## （一）script_jsr223 Java脚本引擎编程实践整理
 
 # 二、spring-code-hub  SpringBoot系列代码库
+
 ## （一）redis SpringBoot整合redis实践整理
 
 - com.zy.redis.transaction redis事务操作
@@ -20,8 +21,6 @@
 - com.zy.spring.mvc.annotation SpringMVC相关注解使用
 
 ## （四）retry 重试框架 Spring-Retry 和 Guava-Retry实践
-
-
 
 ## （五）flash-sale 基于SpringBoot的商品并发抢购项目实例
 
@@ -41,8 +40,15 @@ java-agent相关代码
 
 # 六、design-pattern 设计模式
 
-- interceptor 拦截器模式
-- pipeline 管道模式
+## interceptor 拦截器模式
+## pipeline 管道模式
+## strategy 策略模式
+## template 模板模式
+## decorator 装饰器模式
+## callback  事件回调
+
+
+
 
 # 七、tools 开发工具整理
 
@@ -68,8 +74,8 @@ java-agent相关代码
 ## （一）threadlocal ThreadLocal实践整理
 
 ### （1）[multi-thread-local](multi-thread/threadlocal) Java多线程上下文传递在复杂场景下的实践
-- com.zy.threadlocal.inheritable_ttl  InheritableThreadLocal和TransmittableThreadLocal（TTL）使用实践
 
+- com.zy.threadlocal.inheritable_ttl InheritableThreadLocal和TransmittableThreadLocal（TTL）使用实践
 
 # 十、rpa RPA实践
 
