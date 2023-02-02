@@ -1,0 +1,13 @@
+
+
+#服务器端口
+server:
+  port: 7878
+#redis
+spring:
+  redis:
+    host: 192.168.220.22
+    port: 31838
+    password: UcJyWk6GEKUx6p6V
+    database: 12
+    timeout: 3000

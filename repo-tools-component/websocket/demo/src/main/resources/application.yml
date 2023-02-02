@@ -1,0 +1,5 @@
+server:
+  port: 8081
+logging:
+  path:  logs
+  file: ims.log #日志文件名称

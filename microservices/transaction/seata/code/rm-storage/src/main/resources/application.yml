@@ -1,0 +1,52 @@
+seata:
+  enabled: true
+  tx-service-group: my_test_tx_group
+  enable-auto-data-source-proxy: true
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+    grouplist:
+      default: 192.168.208.32:8091
+    enable-degrade: false
+    disable-global-transaction: false
+  config:
+    type: nacos
+    nacos:
+      namespace:
+      serverAddr: 192.168.208.32:8848
+      group: SEATA_GROUP
+      username: nacos
+      password: nacos
+      cluster: default
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 192.168.208.32:8848
+      group : SEATA_GROUP
+      namespace:
+      username: nacos
+      password: nacos
+      cluster: default
+spring:
+  application:
+    name: rm-storage
+  datasource:
+    url: jdbc:mysql://192.168.202.154:3303/seata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: yf3b@abc123
+  cloud:
+    nacos:
+      discovery:
+        username: nacos
+        password: nacos
+        server-addr: 192.168.208.32:8848
+  jpa:
+    show-sql: true
+server:
+  port: 8004
+logging:
+  level:
+    io:
+      seata: debug

@@ -1,0 +1,58 @@
+seata:
+  enabled: true
+  tx-service-group: my_test_tx_group
+  enable-auto-data-source-proxy: true
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+    grouplist:
+      default: 192.168.208.32:8091
+    enable-degrade: false
+    disable-global-transaction: false
+  config:
+    type: nacos
+    nacos:
+      namespace:
+      serverAddr: 192.168.208.32:8848
+      group: SEATA_GROUP
+      username: nacos
+      password: nacos
+      cluster: default
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 192.168.208.32:8848
+      group : SEATA_GROUP
+      namespace:
+      username: nacos
+      password: nacos
+      cluster: default
+spring:
+  application:
+    name: tm-mall
+  datasource:
+    url: jdbc:mysql://192.168.202.154:3303/seata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: yf3b@abc123
+  cloud:
+    nacos:
+      discovery:
+        username: nacos
+        password: nacos
+        server-addr: 192.168.208.32:8848
+server:
+  port: 8006
+logging:
+  level:
+    io:
+      seata: debug
+feign:
+  client:
+    config:
+      default:
+        #建立连接所用的时间，适用于网络状况正常的情况下，两端连接所需要的时间,
+        ConnectTimeOut: 5000
+        #指建立连接后从服务端读取到可用资源所用的时间,默认为1s
+        ReadTimeOut: 5000

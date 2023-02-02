@@ -1,0 +1,62 @@
+#seata配置
+seata:
+#  开启seata分布式事务
+  enabled: true
+#  事务服务分组名,与naocs一致
+  tx-service-group: my_test_tx_group
+#  是否启用数据库代理
+  enable-auto-data-source-proxy: true
+#  事务服务配置
+  service:
+    vgroup-mapping:
+#      事务分组对应集群名称
+      my_test_tx_group: default
+    grouplist:
+#      Seata-Server服务的IP地址与端口
+      default: 192.168.208.32:8091
+    enable-degrade: false
+    disable-global-transaction: false
+#    Nacos配置中心信息
+  config:
+    type: nacos
+    nacos:
+      namespace:
+      serverAddr: 192.168.208.32:8848
+      group: SEATA_GROUP
+      username: nacos
+      password: nacos
+      cluster: default
+#      Nacos注册中心信息
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 192.168.208.32:8848
+      group : SEATA_GROUP
+      namespace:
+      username: nacos
+      password: nacos
+      cluster: default
+# 应用配置
+spring:
+  application:
+    name: rm-order
+  datasource:
+    url: jdbc:mysql://192.168.202.154:3303/seata?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: yf3b@abc123
+  cloud:
+    nacos:
+      discovery:
+        username: nacos
+        password: nacos
+        server-addr: 192.168.208.32:8848
+  jpa:
+    show-sql: true
+server:
+  port: 8002
+logging:
+  level:
+    io:
+      seata: debug

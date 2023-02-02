@@ -1,8 +1,12 @@
-# 一、code_java JAVA核心技术
+# 一、[code-java](code-java) JAVA核心技术
 
-## （一）script_jsr223 Java脚本引擎编程实践整理
+## （一）jdk8_grammar  JAVA8语法实践
 
-# 二、spring-code-hub  SpringBoot系列代码库
+## （二）script_jsr Java脚本语法应用实践ScriptEngine
+
+### （1）script_jsr223 Java脚本引擎编程实践整理
+
+# 二、[spring-code-hub](spring-code-hub)  SpringBoot系列代码库
 
 ## （一）redis SpringBoot整合redis实践整理
 
@@ -26,57 +30,118 @@
 
 使用悲观锁、乐观锁以及redis lua脚本三种方式实践商品抢购案例
 
-# 三、middleware  中间件实践
+# 三、[middleware](middleware)  中间件实践
 
 ## （一）config-center 配置中心
 
 ### （1）dynamic-config 基本的配置中心功能开发整合
 
-# 四、java-agent
+## （二）canal MySQL 数据库 Binlog 的增量订阅/消费组件
 
-java-agent相关代码
+## （三） redis Redis相关实践
 
-# 五、database 数据库操作
+## （四） minio 分布式的对象存储实践
 
-# 六、 [design-pattern](design-pattern) 设计模式
+# 四、[microservices](microservices)  微服务相关
 
-## interceptor 拦截器模式
-## pipeline 管道模式
-## strategy 策略模式
-## template 模板模式
-## decorator 装饰器模式
-## callback  事件回调
+## （一）gateway 微服务网关
 
-# 七、tools 开发工具整理
+### （1）SpringCloudGateway 微服务网关SpringCloudGateway基础示例
 
-## （一）tool 常用工具整理
+- spring-cloud-gateway-service 普通服务
+- spring-cloud-gateway-sample 网关
 
-### （1）video 视频处理
+## （二）transaction 分布式事务
 
-- com.zy.tool.video.blob blob请求视频/m3u8文件下载
+### （1）Seata  分布式事务事务组件实践
 
-## （二）data-mock 各类测试数据生成
+- code Seata个人使用示例
+- 18.zip 学习源码：综合应用：Seata 分布式事务实战教程
 
-## （三）http_proxy_server 代理服务器
-
-### （1）http-proxy-server 在 Java 中创建 HTTP 代理服务器
-
-# 八、web-async
-
-- 《Web异步与实时交互：iframe AJAX WebSocket开发实战》书籍实践代码
-- Web异步与实时交互异步处理代码
-
-# 九、multi-thread 多线程/高并发
+# 五、 [multithreading](multithreading) Java多线程和并发实践
 
 ## （一）threadlocal ThreadLocal实践整理
 
 ### （1）[multi-thread-local](multi-thread/threadlocal) Java多线程上下文传递在复杂场景下的实践
 
-- com.zy.threadlocal.inheritable_ttl InheritableThreadLocal和TransmittableThreadLocal（TTL）使用实践
+## （二）base 并发组件实践
 
-# 十、rpa RPA实践
+com.zy.threadlocal.inheritable_ttl InheritableThreadLocal和TransmittableThreadLocal（TTL）使用实践
 
-Selenium实践应用
+# 六、 [front_end](front_end) 前端相关技术
 
+## （一）技术组件实践
 
+### （1）[visual-drag-demo](front_end/visual-drag-demo) 网页组件拖曳实践
 
+# 七、[database](database) 数据库操作相关（SQL/ORM框架）
+
+# 八、 [design-pattern](design-pattern) 设计模式
+
+## interceptor 拦截器模式
+
+## pipeline 管道模式
+
+## strategy 策略模式
+
+## template 模板模式
+
+## decorator 装饰器模式
+
+## callback  事件回调
+
+# 九、[repo-tools-component](repo-tools-component) 开发工具整理/技术组件/代码库
+
+## （一）utils 日常扩展工具类总结
+
+## （二）tool 常用工具整理
+
+### （1）video 视频处理
+
+- com.zy.tool.video.blob blob请求视频/m3u8文件下载
+
+## （三）data-mock 各类测试数据生成
+
+## （四）http_proxy_server 代理服务器
+
+### （1）http-proxy-server 在 Java 中创建 HTTP 代理服务器
+
+## （五） aliyun-oss 阿里云OSS
+
+- oss 阿里云上传下载示例
+
+## （六） delay-queue 延迟队列
+
+## （七）rpa RPA实践
+
+- Selenium实践应用
+
+## （八） oshi-core 获取系统信息工具
+
+## （九） sensitive  敏感词过滤
+
+## （十）websocket websocket实践
+
+## （十二）Java_Logging Java日志体系ELK、链路追踪、MDC
+
+- mdc MDC日志应用实践
+- log_trace 分布式日志追踪实现
+
+# （十三） web-async
+
+- 《Web异步与实时交互：iframe AJAX WebSocket开发实战》书籍实践代码
+- Web异步与实时交互异步处理代码
+
+# 十、[security](security) 认证授权安全相关
+
+## （一）[authority-authentication](security/authority-authentication)认证授权系列
+
+### （1）[JsonWebToken使用](security/authority-authentication/jwt) JsonWebToken（JWT）使用
+
+- jjwt 使用jjwt完成JWT的生成和验证
+
+## （二）[spring-security](security/spring-security)  spring-security框架实践
+
+# 十一、java-agent
+
+java-agent相关代码
