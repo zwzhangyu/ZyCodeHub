@@ -42,6 +42,10 @@
 
 ## （四） minio 分布式的对象存储实践
 
+## （五）ElasticSearch 分布式搜索和分析引擎
+
+### （1）easy-es ElasticSearch搜索引擎操作的开源框架
+
 # 四、[microservices](microservices)  微服务相关
 
 ## （一）gateway 微服务网关
