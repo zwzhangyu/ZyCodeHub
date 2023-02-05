@@ -82,17 +82,25 @@ com.zy.threadlocal.inheritable_ttl InheritableThreadLocal和TransmittableThreadL
 
 # 八、 [design-pattern](design-pattern) 设计模式
 
-## interceptor 拦截器模式
+- interceptor 拦截器模式
+- pipeline 管道模式
+- strategy 策略模式
+- template 模板模式
+- decorator 装饰器模式
+- callback 事件回调
+- adapter 适配器模式
+- builder 建造者模式
+- command 命令模式
+- interpreter 解释器模式
+- iterator 迭代器模式
+- mediator 中介者模式
+- memento 备忘录模式
+- null_operation 空对象模式
+- observer 观察者模式
+- responsibility_chain 责任链模式
+- visitor 访问者模式
 
-## pipeline 管道模式
-
-## strategy 策略模式
-
-## template 模板模式
-
-## decorator 装饰器模式
-
-## callback  事件回调
+##
 
 # 九、[repo-tools-component](repo-tools-component) 开发工具整理/技术组件/代码库
 
