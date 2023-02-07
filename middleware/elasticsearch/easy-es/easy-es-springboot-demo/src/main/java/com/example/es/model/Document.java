@@ -1,4 +1,4 @@
-package com.example.eeuse.model;
+package com.example.es.model;
 
 import cn.easyes.annotation.IndexName;
 import lombok.Data;

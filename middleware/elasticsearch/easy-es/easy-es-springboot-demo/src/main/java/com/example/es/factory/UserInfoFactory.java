@@ -1,7 +1,7 @@
-package com.example.eeuse.factory;
+package com.example.es.factory;
 
 import com.apifan.common.random.source.*;
-import com.example.eeuse.model.UserInfo;
+import com.example.es.model.UserInfo;
 import lombok.extern.slf4j.Slf4j;
 
 import java.math.BigDecimal;

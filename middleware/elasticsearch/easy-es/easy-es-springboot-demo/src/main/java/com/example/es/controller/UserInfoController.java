@@ -1,12 +1,15 @@
-package com.example.eeuse.controller;
+package com.example.es.controller;
 
+import cn.easyes.annotation.rely.Analyzer;
+import cn.easyes.annotation.rely.FieldType;
 import cn.easyes.core.biz.EsPageInfo;
 import cn.easyes.core.biz.SAPageInfo;
+import cn.easyes.core.conditions.LambdaEsIndexWrapper;
 import cn.easyes.core.conditions.LambdaEsQueryWrapper;
 import cn.easyes.core.toolkit.EsWrappers;
-import com.example.eeuse.factory.UserInfoFactory;
-import com.example.eeuse.mapper.UserInfoMapper;
-import com.example.eeuse.model.UserInfo;
+import com.example.es.factory.UserInfoFactory;
+import com.example.es.mapper.UserInfoMapper;
+import com.example.es.model.UserInfo;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -35,6 +38,25 @@ public class UserInfoController {
         return "OK";
     }
 
+    @PostMapping("/updateIndex")
+    public String updateIndex() {
+        LambdaEsIndexWrapper<UserInfo> wrapper = new LambdaEsIndexWrapper<>();
+        // 此处简单起见 索引名称须保持和实体类名称一致,字母小写 后面章节会教大家更如何灵活配置和使用索引
+        wrapper.indexName("user_info");
+        // 此处将文章标题映射为keyword类型(不支持分词),文档内容映射为text类型,可缺省
+        // 支持分词查询,内容分词器可指定,查询分词器也可指定,,均可缺省或只指定其中之一,不指定则为ES默认分词器(standard)
+        wrapper.mapping(UserInfo::getAge, FieldType.KEYWORD);
+        // 如果上述简单的mapping不能满足你业务需求,可自定义mapping
+        // wrapper.mapping(Map);
+        // 设置分片及副本信息,3个shards,2个replicas,可缺省
+        wrapper.settings(3,2);
+        // 设置别名信息,可缺省
+//        String aliasName = "daily";
+//        wrapper.createAlias(aliasName);
+        userInfoMapper.updateIndex(wrapper);
+        return "OK";
+    }
+
 
     /**
      * 分词测试
@@ -45,6 +67,7 @@ public class UserInfoController {
         wrapper.match(UserInfo::getContent, word);
         return EsPageInfo.of(userInfoMapper.selectList(wrapper));
     }
+
 
     /**
      * 测试插入10万条数据，每组100条数据
