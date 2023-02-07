@@ -5,6 +5,7 @@ import cn.hutool.core.io.FileUtil;
 
 import java.io.File;
 import java.nio.charset.Charset;
+import java.util.List;
 
 /**
  * Base64Util相关工具类
@@ -22,8 +23,11 @@ public class Base64Util {
     }
 
     public static void main(String[] args) {
-        String filePath = "\\已处理\\1675750742768.jpg";
-        String base64StrFromFile = getBase64StrFromFile(filePath);
-        FileUtil.writeString(base64StrFromFile, new File("repo-tools-component/utils/src/main/java/com/zy/utils/base64/test.txt"), Charset.defaultCharset());
+        List<File> files = FileUtil.loopFiles("//");
+        for (File file : files) {
+            String base64StrFromFile = getBase64StrFromFile(file.getAbsolutePath());
+            String resultFile = file.getParent() + "\\" + file.getName().replace(".jpg", "") + ".txt";
+            FileUtil.writeString(base64StrFromFile, new File(resultFile), Charset.defaultCharset());
+        }
     }
 }
