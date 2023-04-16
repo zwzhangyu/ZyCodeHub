@@ -1,4 +1,4 @@
-package com.example.eeuse;
+package com.example.es;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

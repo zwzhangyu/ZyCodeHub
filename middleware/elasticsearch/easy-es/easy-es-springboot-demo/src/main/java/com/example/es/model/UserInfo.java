@@ -1,4 +1,4 @@
-package com.example.eeuse.model;
+package com.example.es.model;
 
 import cn.easyes.annotation.HighLight;
 import cn.easyes.annotation.IndexField;
@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@IndexName("user_info")
+@IndexName(value = "user_info",aliasName = "user_info",shardsNum = 2,replicasNum = 3)
 public class UserInfo {
 
     @IndexId
@@ -26,6 +26,9 @@ public class UserInfo {
 
     @IndexField(value = "user_name")
     private String userName;
+
+    @IndexField(value = "age")
+    private Integer age;
 
     @IndexField
     private String address;

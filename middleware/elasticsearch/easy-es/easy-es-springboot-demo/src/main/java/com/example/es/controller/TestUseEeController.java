@@ -1,15 +1,14 @@
-package com.example.eeuse.controller;
+package com.example.es.controller;
 
 import cn.easyes.core.conditions.LambdaEsQueryWrapper;
-import com.example.eeuse.mapper.DocumentMapper;
-import com.example.eeuse.model.Document;
+import com.example.es.mapper.DocumentMapper;
+import com.example.es.model.Document;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.UUID;
 
 /**
  * 测试使用Easy-ES
