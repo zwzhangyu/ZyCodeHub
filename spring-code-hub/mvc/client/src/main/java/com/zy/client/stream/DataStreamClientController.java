@@ -12,7 +12,7 @@ import java.util.UUID;
 
 
 /**
- *  数据接发送发
+ *  后台服务接口间大文件的流式发送和读取
  *
  * @author zhangyu
  * @date 2023/6/11
