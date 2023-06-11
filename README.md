@@ -23,6 +23,10 @@
 - com.zy.spring.mvc.converts 参数转换器使用
 - com.zy.spring.mvc.view 视图和视图解析器pdf/excel/html等视图
 - com.zy.spring.mvc.annotation SpringMVC相关注解使用
+- com.zy.client.stream com.zy.server.stream  后台服务接口间大文件的流式发送和读取
+
+
+
 
 ## （四）retry 重试框架 Spring-Retry 和 Guava-Retry实践
 
