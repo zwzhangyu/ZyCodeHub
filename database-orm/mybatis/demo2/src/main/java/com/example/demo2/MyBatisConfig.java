@@ -1,24 +1,23 @@
-//package com.example.demo2;//package com.zy.mybatis.demo;
-//
-//import com.zy.sqlexceptionlog.PrintExceptionSqlInterceptor;
-//import org.apache.ibatis.session.SqlSessionFactory;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.context.annotation.Configuration;
-//
-//import javax.annotation.PostConstruct;
-//import java.util.List;
-//
-//@Configuration
-//public class MyBatisConfig  {
-//
-//    @Autowired
-//    private List<SqlSessionFactory> sqlSessionFactoryList;
-//
-//    @PostConstruct
-//    public void addMyInterceptor() {
-//        for (SqlSessionFactory sqlSessionFactory : sqlSessionFactoryList) {
-//            sqlSessionFactory.getConfiguration().addInterceptor(new PrintExceptionSqlInterceptor());
-//        }
-//    }
-//
-//}
+package com.example.demo2;//package com.zy.mybatis.demo;
+
+import com.zy.plugins.PrintExceptionSqlInterceptor;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+
+import javax.annotation.PostConstruct;
+import java.util.List;
+
+@Configuration
+public class MyBatisConfig  {
+
+    @Autowired
+    private List<SqlSessionFactory> sqlSessionFactoryList;
+
+    @PostConstruct
+    public void addMyInterceptor() {
+        for (SqlSessionFactory sqlSessionFactory : sqlSessionFactoryList) {
+            sqlSessionFactory.getConfiguration().addInterceptor(new PrintExceptionSqlInterceptor());
+        }
+    }
+}

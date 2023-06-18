@@ -25,7 +25,7 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId = 'com.zy'
-            artifactId = 'mybatis-error-log-plugin'
+            artifactId = 'mybatis-plugins'
             version = '1.0.0'
             from components.java
         }

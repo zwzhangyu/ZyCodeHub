@@ -41,7 +41,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.zy:mybatis-error-log-plugin:1.0.0'
+    implementation 'com.zy:mybatis-plugins:1.0.0'
     implementation 'org.projectlombok:lombok:1.18.26'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     annotationProcessor 'org.projectlombok:lombok:1.18.26'

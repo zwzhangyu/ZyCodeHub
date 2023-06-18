@@ -1,4 +1,4 @@
-package com.zy.sqlexceptionlog;
+package com.zy.plugins;
 
 import java.lang.reflect.InvocationTargetException;
 import java.text.DateFormat;
@@ -148,7 +148,6 @@ public class PrintExceptionSqlInterceptor implements Interceptor {
 
     /**
      * 获取完整的执行SQL
-     *
      */
     public static String getFullSql(Configuration configuration, BoundSql boundSql) {
         try {
