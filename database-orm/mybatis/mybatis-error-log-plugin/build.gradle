@@ -1,0 +1,56 @@
+// buildscript必须在顶部，注意位置
+buildscript {
+    repositories {
+        // 优先使用国内源
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        mavenCentral()
+    }
+}
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'com.zy'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.zy'
+            artifactId = 'mybatis-error-log-plugin'
+            version = '1.0.0'
+            from components.java
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
+}
+
+
+repositories {
+    maven {
+        url "https://maven.aliyun.com/nexus/content/repositories/central/"
+    }
+}
+
+dependencies {
+    compileOnly (
+            "org.springframework.boot:spring-boot-autoconfigure:2.0.5.RELEASE",
+            "org.springframework.boot:spring-boot-configuration-processor:2.0.5.RELEASE"
+    )
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    compileOnly 'org.slf4j:slf4j-api:2.0.5'
+    compileOnly 'org.slf4j:slf4j-simple:2.0.5'
+    compileOnly 'org.mybatis:mybatis:3.2.3'
+
+
+}
