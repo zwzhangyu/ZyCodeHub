@@ -1,6 +1,5 @@
-package com.example.grammer.stream;
+package com.zy.core_java.jdk8_grammar.stream;
 
-import com.example.grammer.DataVo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.testng.annotations.Test;
@@ -14,37 +13,6 @@ import java.util.stream.IntStream;
  * @date 2021/8/31
  */
 public class StreamExample {
-
-    /**
-     * 操作集合元素，方法体只有一行代码
-     */
-    @Test
-    public  void  test1(){
-        List<DataVo> dataVoList = DataVo.dataVoList;
-        //forEach操作
-        dataVoList.forEach(p-> p.setDesc("描述信息"));
-        //打印输出
-        dataVoList.forEach(System.out::println);
-    }
-
-
-    /**
-     *  操作集合元素，有方法体
-     *
-     */
-    @Test
-    public  void  test2(){
-        List<DataVo> dataVoList = DataVo.dataVoList;
-        //forEach操作
-        dataVoList.forEach(
-                p->{
-                    p.setDesc("描述信息");
-                    p.setCreateTime(new Date());
-                }
-        );
-        //打印输出
-        dataVoList.forEach(System.out::println);
-    }
 
 
     /**
