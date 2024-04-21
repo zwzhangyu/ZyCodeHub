@@ -21,11 +21,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>cn.hutool</groupId>
-			<artifactId>hutool-all</artifactId>
-			<version>5.8.10</version>
-		</dependency>
+		1
 		<!--mysql数据库驱动 -->
 		<dependency>
 			<groupId>mysql</groupId>
