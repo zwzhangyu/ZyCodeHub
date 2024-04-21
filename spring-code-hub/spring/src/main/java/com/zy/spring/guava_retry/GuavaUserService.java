@@ -1,10 +1,10 @@
-package com.zy.springretry.guava_retry;
+package com.zy.spring.guava_retry;
 
 import com.github.rholder.retry.Retryer;
 import com.github.rholder.retry.RetryerBuilder;
 import com.github.rholder.retry.StopStrategies;
 import com.github.rholder.retry.WaitStrategies;
-import com.zy.springretry.spring_retry.simple.RetryDemoTask;
+import com.zy.spring.spring_retry.simple.RetryDemoTask;
 import org.springframework.remoting.RemoteAccessException;
 
 import java.util.concurrent.TimeUnit;

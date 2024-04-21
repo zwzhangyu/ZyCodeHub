@@ -1,4 +1,4 @@
-package com.zy.springretry.spring_retry.spring;
+package com.zy.spring.spring_retry.spring;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

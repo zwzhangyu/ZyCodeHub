@@ -1,4 +1,4 @@
-package com.zy.springretry.spring_retry.simple;
+package com.zy.spring.spring_retry.simple;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomUtils;

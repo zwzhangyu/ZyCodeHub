@@ -1,4 +1,4 @@
-package com.zy.springretry;
+package com.zy.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
