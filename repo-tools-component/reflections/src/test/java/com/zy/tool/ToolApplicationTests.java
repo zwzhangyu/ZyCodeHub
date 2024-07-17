@@ -1,14 +1,13 @@
-package com.zy.test;
+package com.zy.tool;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TestApplicationTests {
+class ToolApplicationTests {
 
-    @Test
-    void contextLoads() {
-        // test
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }

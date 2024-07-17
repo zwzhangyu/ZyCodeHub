@@ -1,0 +1,14 @@
+---
+name: "牛肉火锅自营店"
+description: "prouductId = 1 && type = 1 "
+condition: "canteen.productId==1&&canteen.type==1"
+priority: 1
+actions:
+  - "System.out.println(1);"
+---
+name: "牛肉火锅旗舰店"
+description: "prouductId = 1 && type = 2"
+condition: "canteen.productId == 2 && canteen.type == 1"
+priority: 2
+actions:
+  - "System.out.println(2);"
