@@ -4,7 +4,7 @@ import cn.hutool.json.JSONArray;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import net.dongliu.requests.Requests;
-import sun.misc.BASE64Encoder;
+import org.springframework.util.Base64Utils;
 
 import java.util.Base64;
 import java.util.HashMap;
@@ -278,8 +278,7 @@ public class YdmVerify {
             e.printStackTrace();
         }
         // 对字节数组Base64编码
-        BASE64Encoder encoder = new BASE64Encoder();
-        return encoder.encode(data.toByteArray());
+        return Base64Utils.encodeToString(data.toByteArray());
     }
 
 
@@ -290,8 +289,7 @@ public class YdmVerify {
             // 读取图片文件
             byte[] imageData = new byte[(int) file.length()];
             imageInFile.read(imageData);
-            BASE64Encoder encoder = new BASE64Encoder();
-            return encoder.encode(imageData);
+            return Base64Utils.encodeToString(imageData);
         } catch (IOException e) {
             e.printStackTrace();
         }

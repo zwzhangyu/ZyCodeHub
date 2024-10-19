@@ -24,9 +24,9 @@ public class RtcRobot {
             carElement.click();
             Thread.sleep(2000);
             WebElement staffNameField = driver.findElement(By.name("vehicleNo"));
-            staffNameField.sendKeys("");
+            staffNameField.sendKeys("皖CC7353");
             WebElement idCardField = driver.findElement(By.name("transCertificateCode"));
-            idCardField.sendKeys("");
+            idCardField.sendKeys("340322254489");
             WebElement form = driver.findElement(By.id("vehicleForm"));
             WebElement submitButton = form.findElement(By.tagName("button"));
             submitButton.click();

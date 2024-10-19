@@ -1,0 +1,11 @@
+CREATE TABLE `t_test_card_log` (
+  `uuid` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `idcard` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `carno` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `color` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `tid` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `timestamp` datetime DEFAULT NULL,
+  `createTime` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `card_type` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`uuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

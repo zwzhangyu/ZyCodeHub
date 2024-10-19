@@ -1,4 +1,4 @@
-package com.zy.demo;
+package com.zy.rule;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

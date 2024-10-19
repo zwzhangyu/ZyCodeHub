@@ -22,9 +22,9 @@ public class TqcRobot {
         try {
             Thread.sleep(2000);
             WebElement staffNameField = driver.findElement(By.name("staffName"));
-            staffNameField.sendKeys("");
+            staffNameField.sendKeys("贺志高");
             WebElement idCardField = driver.findElement(By.name("idCard"));
-            idCardField.sendKeys("");
+            idCardField.sendKeys("410724198009287055");
             WebElement form = driver.findElement(By.id("staffForm"));
             WebElement submitButton = form.findElement(By.tagName("button"));
             submitButton.click();
