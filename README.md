@@ -110,6 +110,9 @@ com.zy.threadlocal.inheritable_ttl InheritableThreadLocal和TransmittableThreadL
 
 ## （一）utils 日常扩展工具类总结
 
+- [FeatureProbe用户稳定进入灰度组原理代码实现](docs/FeatureProbe用户稳定进入灰度组原理代码实现.md)
+
+
 ## （二）tool 常用工具整理
 
 ### （1）video 视频处理
