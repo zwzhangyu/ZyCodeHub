@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zy.client.mapper.OrderMapper">
+    <select id="selectOrders" resultType="com.zy.client.bean.Order">
+        SELECT * FROM orders WHERE 1=1
+        <if test="splitOrderIdList !=null and  splitOrderIdList.size()>0">
+            and (
+            <foreach collection="splitOrderIdList" item="orderIdList" open="(" close=")" separator="OR">
+                order_id in
+                <foreach collection="orderIdList" item="orderId" open="(" close=")" separator=",">
+                    #{orderId}
+                </foreach>
+            </foreach>
+            )
+        </if>
+    </select>
+</mapper>
